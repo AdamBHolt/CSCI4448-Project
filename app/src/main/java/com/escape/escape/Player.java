@@ -6,7 +6,7 @@ package com.escape.escape;
 public class Player extends GameObject
 {
     /**
-     * Attempt to move the Player to the next avaialble position
+     * Attempt to move the Player to the next available position
      * Stop if the next position is occupied
      * @param direction Direction to move
      */
