@@ -19,7 +19,17 @@ public class Player extends GameObject
     {
         while(nextPosEmpty(direction))
         {
-            //method to change x,y coords as indicated.
+            int[] currentPos = this.getPosition();
+
+            if(direction.equals("up"))
+                currentPos[1]++;
+            else if(direction.equals("down"))
+                currentPos[1]--;
+            else if(direction.equals("right"))
+                currentPos[0]++;
+            else if(direction.equals("left"))
+                currentPos[0]--;
+            setPosition(currentPos[0], currentPos[1]);
         }
     }
 
