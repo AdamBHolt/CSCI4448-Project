@@ -5,6 +5,11 @@ package com.escape.escape;
  */
 public class Player extends GameObject
 {
+    public Player(int x, int y)
+    {
+        super(x, y);
+    }
+
     /**
      * Attempt to move the Player to the next available position
      * Stop if the next position is occupied

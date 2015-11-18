@@ -6,6 +6,11 @@ package com.escape.escape;
  */
 public class Enemy extends Player
 {
+    public Enemy(int x, int y)
+    {
+        super(x, y);
+    }
+
     /**
      * Uses basic move method from parent class,
      * but adds check to see if the object that prevents movement is the Player
