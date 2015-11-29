@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".IntroScreen">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView1"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="It has begun..."
+            android:textSize="48sp"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed convallis orci. Aliquam erat volutpat. Vestibulum aliquet erat eu tortor pharetra fermentum. Curabitur vitae metus imperdiet, cursus dui quis, gravida nisl. Cras aliquam pulvinar sodales. Nam pharetra rutrum metus, vitae imperdiet nibh porta vitae. Aliquam iaculis ante eget velit posuere vulputate."
+            android:id="@+id/textView2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".9" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:onClick="startGame"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.03" />
+    </LinearLayout>
+</FrameLayout>
