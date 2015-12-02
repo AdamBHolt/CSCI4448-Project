@@ -1,3 +1,5 @@
+package com.escape.escape;
+
 import java.util.ArrayList;
 
 public class GameBoard {
