@@ -14,7 +14,7 @@ public class GameObjectFactory
         else if(o.equals("exit"))
             object = Exit.getExit(x, y);
         else
-            throw(new InvalidObjectException);
+            throw(new InvalidObjectException());
         return object;
     }
 }

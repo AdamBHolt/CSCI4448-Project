@@ -48,7 +48,7 @@ public class Player extends GameObject
         {
             nextPos[1]++;
             //Need to create static method in GameBoard to get a position
-            isOccupied = GameBoard.ObjectExists(this.getXPos(), this.getYPos());
+            isOccupied = GameBoard.checkLocation(this.getXPos(), this.getYPos());
         }
         else if(direction.equals("down"))
         {
