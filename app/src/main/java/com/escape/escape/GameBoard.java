@@ -3,18 +3,24 @@ package com.escape.escape;
 import java.util.ArrayList;
 
 public class GameBoard {
-	private ArrayList<GameObject> gameObjects;
-	private GameObject foundObject; 
-	public GameBoard() {
 
-	}
-	public GameBoard(ArrayList<GameObject> listA) {
+	private GameObject foundObject; 
+	private static GameBoard board = null;
+	
+	private GameBoard(ArrayList<GameObject> listA) {
 		for(GameObject object: listA){
 			gameObjects.add(object);
 			
 		}
 		foundObject = null;
 	}
+	public static GameBoard GetGameBoard(ArrayList<GameObject> listA){
+		if (board == null) {
+			board = new GameBoard(listA);
+		}
+		return board;
+	}
+	
 	public boolean checkLocation(int x, int y) {
 		boolean isOccupied = false;
 		int objectX;
@@ -34,7 +40,7 @@ public class GameBoard {
 		return isOccupied;
 	}
 	public String objectTypeAt() {
-		if(foundObject = null){
+		if(foundObject == null){
 			return "obstacle";
 			}
 		String foundObjectModel = foundObject.getObjectModel();
