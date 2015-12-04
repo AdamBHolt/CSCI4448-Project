@@ -6,21 +6,38 @@ public class GameBoard {
 
 	private GameObject foundObject; 
 	private static GameBoard board = null;
-	
-	private GameBoard(ArrayList<GameObject> listA) {
+	private ArrayList<GameObject> gameObjects;
+
+	private GameBoard()
+	{
+		gameObjects = new ArrayList<>();
+		foundObject = null;
+	}
+
+	private GameBoard(ArrayList<GameObject> listA)
+	{
+		gameObjects = new ArrayList<>();
 		for(GameObject object: listA){
 			gameObjects.add(object);
 			
 		}
 		foundObject = null;
 	}
-	public static GameBoard GetGameBoard(ArrayList<GameObject> listA){
-		if (board == null) {
-			board = new GameBoard(listA);
-		}
+
+	public static GameBoard getGameboard()
+	{
+		if (board == null)
+			board = new GameBoard();
 		return board;
 	}
-	
+
+	public static GameBoard getGameBoard(ArrayList<GameObject> listA)
+	{
+		if (board == null)
+			board = new GameBoard(listA);
+		return board;
+	}
+
 	public boolean checkLocation(int x, int y) {
 		boolean isOccupied = false;
 		int objectX;
@@ -39,23 +56,32 @@ public class GameBoard {
 		}
 		return isOccupied;
 	}
-	public String objectTypeAt() {
-		if(foundObject == null){
+	public String objectTypeAt()
+	{
+		if(foundObject == null)
 			return "obstacle";
-			}
+
 		String foundObjectModel = foundObject.getObjectModel();
-		if(foundObjectModel.equals("obstacle")){
+
+		if(foundObjectModel.equals("obstacle"))
 			return foundObjectModel;
-			}
-		if(foundObjectObjectModel.equals("enemy")){
-			this.loseGame();
-			}
-		if(foundObjectObjectModel.equals("exit")){
-			this.winGame();
-			}
+
+		if(foundObject.getObjectModel().equals("enemy"))
+			loseGame();
+
+		if(foundObject.getObjectModel().equals("exit"))
+			winGame();
+
+		return null;
 	}
-	private void loseGame() {}
-	private void winGame() {}
-	
-	
+
+	private void loseGame()
+	{
+
+	}
+
+	private void winGame()
+	{
+
+	}
 }
