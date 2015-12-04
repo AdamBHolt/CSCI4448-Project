@@ -1,3 +1,5 @@
+package com.escape.escape;
+
 /* imports */
 import java.io.* ;
 import android.app.Activity;
@@ -8,7 +10,7 @@ import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-//package com.escape.escape;
+
 
 public class Controller extends Activity implements OnTouchListener {
 	private static Controller theController = null;
