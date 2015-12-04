@@ -24,7 +24,7 @@ public class GameBoard {
 		foundObject = null;
 	}
 
-	public static GameBoard getGameboard()
+	public static GameBoard getGameBoard()
 	{
 		if (board == null)
 			board = new GameBoard();

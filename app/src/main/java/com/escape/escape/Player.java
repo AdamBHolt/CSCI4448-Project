@@ -5,6 +5,8 @@ package com.escape.escape;
  */
 public class Player extends GameObject
 {
+    GameBoard gameBoard = GameBoard.getGameBoard();
+
     public Player(int x, int y)
     {
         super(x, y);
@@ -14,12 +16,14 @@ public class Player extends GameObject
      * Attempt to move the Player to the next available position
      * Stop if the next position is occupied
      * @param direction Direction to move
+     * @return Array of new x,y position
      */
-    public void move(String direction)
+    public int[] move(String direction)
     {
+        int[] currentPos = new int[2];
         while(nextPosEmpty(direction))
         {
-            int[] currentPos = this.getPosition();
+            currentPos = this.getPosition();
 
             if(direction.equals("up"))
                 currentPos[1]++;
@@ -31,6 +35,8 @@ public class Player extends GameObject
                 currentPos[0]--;
             setPosition(currentPos[0], currentPos[1]);
         }
+
+        return currentPos;
     }
 
     /**
@@ -47,23 +53,22 @@ public class Player extends GameObject
         if(direction.equals("up"))
         {
             nextPos[1]++;
-            //Need to create static method in GameBoard to get a position
-            isOccupied = GameBoard.checkLocation(this.getXPos(), this.getYPos());
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
         }
         else if(direction.equals("down"))
         {
             nextPos[1]--;
-            isOccupied = GameBoard.ObjectExists(this.getXPos(), this.getYPos());
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
         }
         else if(direction.equals("right"))
         {
             nextPos[0]++;
-            isOccupied = GameBoard.ObjectExists(this.getXPos(), this.getYPos());
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
         }
         else if(direction.equals("left"))
         {
             nextPos[0]--;
-            isOccupied = GameBoard.ObjectExists(this.getXPos(), this.getYPos());
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
         }
 
         return isOccupied;
