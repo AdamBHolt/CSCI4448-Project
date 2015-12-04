@@ -15,20 +15,10 @@ public class Enemy extends Player
      * Uses basic move method from parent class,
      * but adds check to see if the object that prevents movement is the Player
      */
-    public void move(Srting direction)
+    public int[] move(String direction)
     {
         super.move(direction);
-                //Implement static method getPlayerPosition in GameBoard
-        if(this.getPosition() == GameBoard.getPlayerPosition())
-            killPlayer();
-    }
 
-    /**
-     * Tell the EscapeDriver to end the game.
-     */
-    private void killPlayer()
-    {
-        //Implement static method in EscapeDriver.
-        EscapeDriver.loseGame();
+        return getPosition();
     }
 }
