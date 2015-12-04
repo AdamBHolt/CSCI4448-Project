@@ -2,7 +2,7 @@ package com.escape.escape;
 
 public class GameObjectFactory
 {
-    public GameObject getGameObject(String o, int x, int y) throws InvalidObjectException
+    public static GameObject getGameObject(String o, int x, int y) throws InvalidObjectException
     {
         GameObject object = null;
         if(o.equals("player"))
