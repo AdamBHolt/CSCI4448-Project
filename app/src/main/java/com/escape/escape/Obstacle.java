@@ -7,4 +7,8 @@ public class Obstacle extends GameObject
         super(x, y);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

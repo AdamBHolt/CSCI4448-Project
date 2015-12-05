@@ -17,4 +17,8 @@ public class Exit extends GameObject
             theExit = new Exit(x, y);
         return theExit;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

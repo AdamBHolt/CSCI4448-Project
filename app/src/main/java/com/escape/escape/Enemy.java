@@ -21,4 +21,8 @@ public class Enemy extends Player
 
         return getPosition();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

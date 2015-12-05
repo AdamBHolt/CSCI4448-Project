@@ -14,4 +14,8 @@ public class InvalidObjectException extends Exception
     {
         super(message);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

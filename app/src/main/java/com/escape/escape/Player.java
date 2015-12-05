@@ -7,12 +7,21 @@ import java.util.ArrayList;
 /**
  * Player object class
  */
+<<<<<<< HEAD
 public class Player extends GameObject {
     GameObject foundObject;
     ArrayList<GameObject> gameObjects;
     int[] prevPos;
 
     public Player(int x, int y) {
+=======
+public class Player extends GameObject
+{
+    GameBoard gameBoard = GameBoard.getGameBoard();
+
+    public Player(int x, int y)
+    {
+>>>>>>> origin/master
         super(x, y);
     }
 
@@ -22,6 +31,7 @@ public class Player extends GameObject {
      * @param direction Direction to move
      * @return Array of new x,y position
      */
+<<<<<<< HEAD
     public int[] move(String direction) {
         int[] currentPos = this.getPosition();
         setPrevious(this.getPosition());
@@ -32,12 +42,29 @@ public class Player extends GameObject {
                 currentPos[1]--;
             else if(direction.equals("down"))
                 currentPos[1]++;
+=======
+    public int[] move(String direction)
+    {
+        int[] currentPos = new int[2];
+        while(nextPosEmpty(direction))
+        {
+            currentPos = this.getPosition();
+
+            if(direction.equals("up"))
+                currentPos[1]++;
+            else if(direction.equals("down"))
+                currentPos[1]--;
+>>>>>>> origin/master
             else if(direction.equals("right"))
                 currentPos[0]++;
             else if(direction.equals("left"))
                 currentPos[0]--;
             setPosition(currentPos[0], currentPos[1]);
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
         return currentPos;
     }
 
@@ -51,9 +78,21 @@ public class Player extends GameObject {
         boolean isOccupied = false;
         int[] nextPos = this.getPosition();
 
+<<<<<<< HEAD
         if(direction.equals("up")) {
             nextPos[1]--;
             isOccupied = checkLocation(nextPos);
+=======
+        if(direction.equals("up"))
+        {
+            nextPos[1]++;
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
+        }
+        else if(direction.equals("down"))
+        {
+            nextPos[1]--;
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
+>>>>>>> origin/master
         }
         else if(direction.equals("down")) {
             nextPos[1]++;
@@ -61,11 +100,19 @@ public class Player extends GameObject {
         }
         else if(direction.equals("right")) {
             nextPos[0]++;
+<<<<<<< HEAD
             isOccupied = checkLocation(nextPos);
+=======
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
+>>>>>>> origin/master
         }
         else if(direction.equals("left")) {
             nextPos[0]--;
+<<<<<<< HEAD
             isOccupied = checkLocation(nextPos);
+=======
+            isOccupied = gameBoard.checkLocation(this.getXPos(), this.getYPos());
+>>>>>>> origin/master
         }
         return !isOccupied;
     }
@@ -90,6 +137,7 @@ public class Player extends GameObject {
         }
         return isOccupied;
     }
+<<<<<<< HEAD
 
     public void setGameObjects(ArrayList<GameObject> gameObjects){
         this.gameObjects = gameObjects;
@@ -106,4 +154,6 @@ public class Player extends GameObject {
     public GameObject getFoundObject(){
         return foundObject;
     }
+=======
+>>>>>>> origin/master
 }
