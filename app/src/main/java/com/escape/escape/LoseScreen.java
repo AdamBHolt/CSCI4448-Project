@@ -8,18 +8,18 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class IntroScreen extends ActionBarActivity {
+public class LoseScreen extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro_screen);
+        setContentView(R.layout.activity_lose_screen);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_intro_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_lose_screen, menu);
         return true;
     }
 
@@ -38,8 +38,8 @@ public class IntroScreen extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startGame(View view) {
-        Intent intent = new Intent(IntroScreen.this, GameBoard.class);
+    public void loadIntro(View view){
+        Intent intent = new Intent(LoseScreen.this, IntroScreen.class);
         startActivity(intent);
     }
 }

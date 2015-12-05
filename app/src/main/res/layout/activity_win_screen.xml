@@ -1,7 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="#0099cc"
-    tools:context="com.hypernova.jrener.escape.WinScreen">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/win"
+    tools:context=".WinScreen">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="VICTORY!"
+            android:text="ESCAPED!"
+            android:textStyle="bold"
+            android:textColor="#eeeeff"
             android:textSize="48sp"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
@@ -32,8 +36,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed convallis orci. Aliquam erat volutpat. Vestibulum aliquet erat eu tortor pharetra fermentum. Curabitur vitae metus imperdiet, cursus dui quis, gravida nisl. Cras aliquam pulvinar sodales. Nam pharetra rutrum metus, vitae imperdiet nibh porta vitae. Aliquam iaculis ante eget velit posuere vulputate."
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed convallis orci. Aliquam erat volutpat. Vestibulum aliquet erat eu tortor pharetra fermentum. Curabitur vitae metus imperdiet, cursus dui quis, gravida nisl. Cras aliquam pulvinar sodales. Nam pharetra rutrum metus, vitae imperdiet nibh porta vitae."
             android:id="@+id/textView2"
+            android:textColor="#eeeeff"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:textSize="24sp"
@@ -50,4 +55,4 @@
             android:layout_weight="0.03" />
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>

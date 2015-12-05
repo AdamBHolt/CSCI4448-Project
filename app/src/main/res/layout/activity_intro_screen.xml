@@ -1,9 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
-    tools:context=".IntroScreen">
+    android:background="@drawable/lost">
 
 
     <LinearLayout
@@ -25,7 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="It has begun..."
+            android:text="It Begins"
+            android:textColor="#eeeeff"
+            android:textStyle="bold"
             android:textSize="48sp"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
@@ -35,7 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed convallis orci. Aliquam erat volutpat. Vestibulum aliquet erat eu tortor pharetra fermentum. Curabitur vitae metus imperdiet, cursus dui quis, gravida nisl. Cras aliquam pulvinar sodales. Nam pharetra rutrum metus, vitae imperdiet nibh porta vitae. Aliquam iaculis ante eget velit posuere vulputate."
+            android:text="You wake to find yourself lost. You're cold and hungry, and your only chance of survival is to find the exit. But there are traps hidden in this cave. Sliding around, you attempt to make your way to the first visible door. What cruel mind brought you here, you wonder. But a more important thought crosses your mind: Can you escape with your life?"
+            android:textColor="#eeeeff"
             android:id="@+id/textView2"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -48,8 +50,9 @@
             android:layout_height="wrap_content"
             android:text="Start"
             android:onClick="startGame"
-            android:id="@+id/button"
+            android:id="@+id/button3"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.03" />
     </LinearLayout>
-</FrameLayout>
+
+</RelativeLayout>

@@ -9,6 +9,13 @@ public abstract class GameObject
     private int yPos;
     private String objectModel;
 
+    public GameObject(){}
+
+    public GameObject(int x, int y)
+    {
+        setPosition(x, y);
+    }
+
     /**
      * Set x and y coordinates for the GameObject
      * @param x x coordinate
