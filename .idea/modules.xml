@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Escape.iml" filepath="$PROJECT_DIR$/Escape.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSCI4448-Project.iml" filepath="$PROJECT_DIR$/CSCI4448-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
